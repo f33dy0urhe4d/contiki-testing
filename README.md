@@ -1,4 +1,8 @@
---v1.0--
+contiki-testing --> TEMP_ETX
+===============
+
+--v1.1--
+--------------
 
 -->new metric defined which considers ETX as link path metric and takes into account the attribute "temperature" to favourite nodes that own the specified attribute in the parent selection.
 
