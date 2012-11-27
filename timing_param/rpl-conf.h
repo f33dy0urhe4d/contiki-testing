@@ -34,6 +34,10 @@
  *	Joakim Eriksson <joakime@sics.se> & Nicolas Tsiftes <nvt@sics.se>
  *
  */
+ 
+#include "net/rpl/rpl.h"
+ 
+//platform/sky/platform-conf.h:typedef unsigned long clock_time_t;
 #ifndef RPL_CONF_H
 #define RPL_CONF_H
 /* Set to 1 to enable RPL statistics */
@@ -45,10 +49,15 @@
  * DAG Metric Container Object Type (see below). Currently, we only
  * support RPL_DAG_MC_ETX and RPL_DAG_MC_ENERGY.
  */
+ 
 #ifdef RPL_CONF_DAG_MC
 #define RPL_DAG_MC RPL_CONF_DAG_MC
 #else
+#if resource == TEMP_ETX
+#define RPL_DAG_MC RPL_DAG_MC_TEMP_ETX
+#else
 #define RPL_DAG_MC RPL_DAG_MC_ETX
+#endif 
 #endif /* RPL_CONF_DAG_MC */
 /*
  * The objective function used by RPL is configurable through the
@@ -141,4 +150,5 @@
 #else
 #define RPL_DIO_REDUNDANCY          10
 #endif
-#endif /* RPL_CONF_H */
+#endif
+/* RPL_CONF_H */
