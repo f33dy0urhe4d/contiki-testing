@@ -12,11 +12,10 @@ new metric defined which considers ETX as link path metric and takes into accoun
 /rpl/
 - rpl.h
 - rpl-conf.h
-
 - rpl.c
 - rpl-icmp6.c
 - rpl-of-etx.c
 
 -->**to-do list:**
--define the attribute *residual energy* to favourite nodes with the greatest attribute in the parent selection
--define a parameter that specifies how long a certain metric has to be active
+- define the attribute *residual energy* to favourite nodes with the greatest attribute in the parent selection
+- define a parameter that specifies how long a certain metric has to be active
